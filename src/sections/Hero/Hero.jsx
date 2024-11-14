@@ -19,7 +19,7 @@ function Hero() {
   
   return (
     
-    <section id = "hero" className={styles.Container}>
+    <section id = "hero" className={styles.container}>
     <div className={styles.colorModeContainer}>
     <img 
       className={styles.hero} 
@@ -47,9 +47,11 @@ function Hero() {
       </a>
 
       <a href="https://www.linkedin.com/in/jashanveer/" target="_blank">
-      <img src={LinkedIcon} alt="LinkedIn"/>
+      <img className={styles.info}
+      src={LinkedIcon} alt="LinkedIn"/>
       </a>
-      <p>
+      </span>
+      <p className={styles.description}>
         Student at the University of Alberta, I am passionate about web development and software engineering. I am always looking for new opportunities to learn and grow.
       </p>
       <a href={CV} download>
@@ -57,7 +59,7 @@ function Hero() {
           Resume
           </button>
       </a>
-    </span>
+    
   </div>
   </section>
   );
