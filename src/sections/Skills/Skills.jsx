@@ -1,24 +1,33 @@
 import styles from './SkillsStyles.module.css'
+import cdark from '../../assets/checkmark-dark.svg'
 import clight from '../../assets/checkmark-light.svg'
-import SkillList from '../../common/SkillList';
+import SkillList from '../../common/SkillList.jsx'
+import { useTheme } from '../../common/ThemeContext';
 function Skills() {
+  const {theme,toggleTheme} = useTheme();
+  const CheckIcon = theme === 'light' ? clight : cdark;
   return (
+    
     <section id="skills" className={styles.container}>
-    <h1>Skills</h1>
+      
+    <h1 className="sectionTitle">Skills</h1>
     <div className={styles.skillList}>
-      <SkillList src={clight} skill="Python" />
-      <SkillList src={clight} skill="HTML" />
-      <SkillList src={clight} skill="JavaScript" />
-      <SkillList src={clight} skill="C" />
-      <SkillList src={clight} skill="Java" />
-      <SkillList src={clight} skill="React" />
-      <SkillList src={clight} skill="CSS" />
-      <SkillList src={clight} skill="SQL" />
-      <SkillList src={clight} skill="Git" />
-      <SkillList src={clight} skill="Linux" />
-      <SkillList src={clight} skill="Docker" />
+      <SkillList src={CheckIcon} skill="Python" />
+      <SkillList src={CheckIcon} skill="HTML" />
+      <SkillList src={CheckIcon} skill="CSS" />
+      <SkillList src={CheckIcon} skill="JavaScript" />
+      <SkillList src={CheckIcon} skill="C" />
 
     </div>
+    <hr/>
+    <div className={styles.skillList}>
+      <SkillList src={CheckIcon} skill="React" />
+      <SkillList src={CheckIcon} skill="SQL" />
+      <SkillList src={CheckIcon} skill="MongoDB" />
+      <SkillList src={CheckIcon} skill="Git" />
+      <SkillList src={CheckIcon} skill="Node.js"/>
+  
+      </div>
     </section>
   );
 }

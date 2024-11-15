@@ -1,11 +1,12 @@
-
-
-function SkillList(srce,alt,skill) {
+import React from 'react'
+function SkillList({src,skill}) {
   return (
+    <div>
     <span>
-    <img src ={srce} alt="checkmark icon"/>
+    <img src= {src} alt="checkmark icon"/>
     <p>{skill}</p>
-  </span>
+    </span>
+    </div>
   )
 }
 
