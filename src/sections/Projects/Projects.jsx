@@ -3,6 +3,7 @@ import styles from './ProjectsStyles.module.css'
 import Viberr from '../../assets/viberr.png'
 import ProjectCard from '../../common/ProjectCard'
 import freshburg from '../../assets/fresh-burger.png'
+import TastyTray from '../../assets/TastyTray.png'
 import hipster from '../../assets/hipsster.png'
 function Projects() {
   return (
@@ -11,11 +12,12 @@ function Projects() {
             Projects
         </h1>
         <div className={styles.ProjectsContainer}>
-            <ProjectCard link ={'https://github.com/JashanveerS/Chess-AI'} 
-            src={Viberr}
-            alt ={"My Chess BOT"}
-            h3={"CHESS BOT"}
-            p={"MY chess Bot"}/>
+        {/* TastyTray */}
+            <ProjectCard link ={'https://github.com/JashanveerS/Chess-AI'}  
+            src={TastyTray}
+            alt ={"Tasty Tray"}
+            h3={"Tasty Tray"}
+            p={"Your Meal Assistant"}/>
             <ProjectCard link ={'https://github.com/JashanveerS/jvsingh.github.io'}
             src={freshburg}
             alt ={"Fresh Burgursssss"}
