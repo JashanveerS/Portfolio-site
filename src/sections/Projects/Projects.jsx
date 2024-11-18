@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './ProjectsStyles.module.css'
 import Viberr from '../../assets/viberr.png'
 import ProjectCard from '../../common/ProjectCard'
-import freshburg from '../../assets/fresh-burger.png'
 import TastyTray from '../../assets/TastyTray.png'
 import hipster from '../../assets/hipsster.png'
 function Projects() {
@@ -19,7 +18,7 @@ function Projects() {
             h3={"Tasty Tray"}
             p={"Your Meal Assistant"}/>
             <ProjectCard link ={'https://github.com/JashanveerS/jvsingh.github.io'}
-            src={freshburg}
+            src={Viberr}
             alt ={"Fresh Burgursssss"}
             h3={"FRESH BURG"}
             p={"brufggaf"}/>
