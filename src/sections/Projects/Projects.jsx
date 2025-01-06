@@ -17,6 +17,7 @@ function Projects() {
             alt ={"Tasty Tray"}
             h3={"Tasty Tray"}
             p={"Your Meal Assistant"}/>
+          {/* Personal website */}
             <ProjectCard link ={'https://github.com/JashanveerS/jvsingh.github.io'}
             src={Viberr}
             alt ={"Fresh Burgursssss"}
