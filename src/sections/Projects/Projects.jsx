@@ -4,6 +4,7 @@ import Viberr from '../../assets/viberr.png'
 import ProjectCard from '../../common/ProjectCard'
 import TastyTray from '../../assets/TastyTray.png'
 import hipster from '../../assets/hipsster.png'
+import SkyByte from '../../assets/SkyByte.png'
 function Projects() {
   return (
     <section id = "projects" className={styles.container}>
@@ -17,6 +18,11 @@ function Projects() {
             alt ={"Tasty Tray"}
             h3={"Tasty Tray"}
             p={"Your Meal Assistant"}/>
+            <ProjectCard link ={'https://github.com/Sky-Bytee/Skybyte'}
+            src={SkyByte}
+            alt ={"SkyByte"}
+            h3={"Full-stack Cloud Storage Solution"}
+            p={"SkyByte is a full-stack cloud storage solution that allows users to upload and download files, create folders, and share files with other users."}/>
           {/* Personal website */}
             <ProjectCard link ={'https://github.com/JashanveerS/jvsingh.github.io'}
             src={Viberr}
@@ -28,6 +34,7 @@ function Projects() {
             alt ={"youtube"}
             h3={"youtube"}
             p={"Mwef"}/>
+            
 
             
         </div>

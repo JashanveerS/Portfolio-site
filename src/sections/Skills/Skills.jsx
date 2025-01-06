@@ -14,8 +14,9 @@ function Skills() {
     <div className={styles.skillList}>
       <SkillList src={CheckIcon} skill="Python" />
       <SkillList src={CheckIcon} skill="HTML" />
-      <SkillList src={CheckIcon} skill="CSS" />
+      <SkillList src={CheckIcon} skill="Tailwind CSS" />
       <SkillList src={CheckIcon} skill="JavaScript" />
+      <SkillList src={CheckIcon} skill="TypeScript" />
       <SkillList src={CheckIcon} skill="C" />
 
     </div>
@@ -26,6 +27,8 @@ function Skills() {
       <SkillList src={CheckIcon} skill="MongoDB" />
       <SkillList src={CheckIcon} skill="Git" />
       <SkillList src={CheckIcon} skill="Node.js"/>
+      <SkillList src={CheckIcon} skill="Next.js"/>
+      <SkillList src={CheckIcon} skill="Three.js" />
   
       </div>
     </section>
