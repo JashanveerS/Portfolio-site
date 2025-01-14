@@ -18,6 +18,13 @@
         transition: transform 200ms ease-in-out;
 
     }
+    p {
+        width: 400px; /* Set the width of the paragraph */
+        white-space: normal; /* Ensure text wraps within the container */
+        word-wrap: break-word; /* Break words if they are too long for the container */
+        overflow: hidden; /* Hide overflowing content */
+        text-overflow: ellipsis; /* Add ellipsis for truncated text (optional) */
+      }
     a:hover{
         transform: scale(1.05);
     }
