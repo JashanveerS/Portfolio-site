@@ -24,16 +24,6 @@ function Projects() {
             h3={"Full-stack Cloud Storage Solution"}
             p={"SkyByte is a full-stack cloud storage solution that allows users to upload and download files, create folders, and share files with other users."}/>
           {/* Personal website */}
-            <ProjectCard link ={'https://github.com/JashanveerS/jvsingh.github.io'}
-            src={Viberr}
-            alt ={"Fresh Burgursssss"}
-            h3={"FRESH BURG"}
-            p={"brufggaf"}/>
-            <ProjectCard link ={'https://www.youtube.com/'}
-            src={hipster}
-            alt ={"youtube"}
-            h3={"youtube"}
-            p={"Mwef"}/>
             
 
             

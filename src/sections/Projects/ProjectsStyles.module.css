@@ -29,7 +29,7 @@
     gap: 30px;
 }
 
-@media (width>=800px){
+@media (width<=800px){
     .ProjectsContainer{
         flex-direction: row;
         flex-wrap: wrap;
