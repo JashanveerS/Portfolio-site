@@ -12,6 +12,7 @@
 
     a{
         width: fit-content;
+        flex-wrap: wrap;
         text-decoration: none;
         color: #222;
         transition: transform 200ms ease-in-out;
