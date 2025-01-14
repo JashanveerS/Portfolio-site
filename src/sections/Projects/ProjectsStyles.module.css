@@ -23,13 +23,13 @@
 
 }
 .ProjectsContainer{
-    display: flex;
+    display: flex-wrap;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
 
-@media (width<=800px){
+@media (width>=800px){
     .ProjectsContainer{
         flex-direction: row;
         flex-wrap: wrap;
@@ -37,3 +37,4 @@
         padding: 0 30px;
     }
 }
+
