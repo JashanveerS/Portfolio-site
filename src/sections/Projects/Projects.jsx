@@ -21,7 +21,7 @@ function Projects() {
             <ProjectCard link ={'https://github.com/Sky-Bytee/Skybyte'}
             src={SkyByte}
             alt ={"SkyByte"}
-            h3={"Full-stack Cloud Storage Solution"}
+            h3={"SkyByte-A Cloud Storage Solution"}
             p={"SkyByte is a full-stack cloud storage solution."}/>
           {/* Personal website */}
             
