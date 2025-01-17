@@ -38,9 +38,9 @@ function Hero() {
     <h1>
       Hi, 
       <br/> 
-      I'm Jashanveer
+      I'm Jashanveer Singh
     </h1>
-    <h2>Full Stack Developer</h2>
+    <h2>Student-Full Stack Developer</h2>
     <span>
       <a href="https://github.com/JashanveerS" target="_blank">
       <img src={gitIcon} alt="Github"/>
@@ -52,7 +52,10 @@ function Hero() {
       </a>
       </span>
       <p className={styles.description}>
-        Student at the University of Alberta, I am passionate about web development and software engineering. I am always looking for new opportunities to learn and grow.
+        I'm A 2ⁿᵈ Year Student at the University of Alberta, I am passionate about web development and software development. I am always looking for new opportunities to learn and grow.
+      </p>
+      <p className={styles.description}>
+        (Currently exploring Java and RISC-V)
       </p>
       <a href={CV} download>
         <button className="hover">
