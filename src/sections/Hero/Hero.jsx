@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/hero-img.jpeg';
 import sun from '../../assets/sun.svg';
@@ -8,10 +9,11 @@ import Llight from '../../assets/linkedin-light.svg';
 import LDark from '../../assets/linkedin-dark.svg';
 import CV from '../../assets/cv.pdf';
 import { useTheme } from '../../common/ThemeContext';
-
+import PDFModal from '../../common/PDFModal';
 
 function Hero() {
   const {theme,toggleTheme} = useTheme();
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
   
   const themeIcon = theme === 'light' ? sun : moon;
   const gitIcon = theme === 'light' ? glight : gdark;
@@ -57,13 +59,20 @@ function Hero() {
       <p className={styles.description}>
         (Currently exploring Java and RISC-V)
       </p>
-      <a href={CV} download>
-        <button className="hover">
+      <div style={{alignSelf: 'center'}}>
+        <button className="hover" onClick={() => setIsPDFModalOpen(true)}>
           Resume
-          </button>
-      </a>
+        </button>
+      </div>
     
   </div>
+  
+  {/* PDF Modal */}
+  <PDFModal 
+    isOpen={isPDFModalOpen} 
+    onClose={() => setIsPDFModalOpen(false)} 
+    pdfUrl={CV} 
+  />
   </section>
   );
 }
