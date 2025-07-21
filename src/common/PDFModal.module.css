@@ -1,254 +1,30 @@
+/* Base classes that work with Tailwind */
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
-  padding: 10px;
+  /* Let Tailwind handle most styles */
 }
 
 .modalContent {
-  background-color: var(--project-card-bg);
-  border-radius: 15px;
-  box-shadow: 0 20px 40px var(--card-shadow);
-  border: 2px solid var(--border-color);
-  width: 90vw;
-  height: 95vh;
-  max-width: 1000px;
-  max-height: 900px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  /* Let Tailwind handle most styles */
 }
 
 .modalHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--hover-bg);
-}
-
-.modalHeader h3 {
-  color: var(--text-color);
-  font-size: 1.2em;
-  margin: 0;
-  font-weight: 600;
-}
-
-.headerButtons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  /* Let Tailwind handle most styles */
 }
 
 .downloadBtn {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* Let Tailwind handle most styles */
 }
-
-.downloadBtn:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-1px);
-}
-
 
 .closeBtn {
-  background: none;
-  border: 2px solid var(--border-color);
-  color: var(--text-color);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.closeBtn:hover {
-  background-color: var(--hover-bg);
-  transform: scale(1.1);
+  /* Let Tailwind handle most styles */  
 }
 
 .pdfContainer {
-  flex: 1;
-  padding: 0;
-  overflow: hidden;
+  /* Let Tailwind handle most styles */
 }
 
 .pdfViewer {
-  width: 100%;
-  height: 100%;
-  border: none;
   background-color: #f5f5f5;
 }
 
-.modalFooter {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
-  border-top: 1px solid var(--border-color);
-  background-color: var(--hover-bg);
-}
-
-.downloadBtnLarge {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 10px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px var(--card-shadow);
-}
-
-.downloadBtnLarge:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--card-shadow);
-}
-
-.closeBtnLarge {
-  background: none;
-  border: 2px solid var(--border-color);
-  color: var(--text-color);
-  padding: 12px 30px;
-  border-radius: 10px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.closeBtnLarge:hover {
-  background-color: var(--hover-bg);
-  transform: translateY(-1px);
-}
-
-/* Responsive Design for Different Devices */
-
-/* Mobile Portrait (320px - 480px) */
-@media (max-width: 480px) {
-  .modalOverlay {
-    padding: 5px;
-  }
-  
-  .modalContent {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  
-  .modalHeader {
-    padding: 12px 15px;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  
-  .modalHeader h3 {
-    font-size: 1em;
-    line-height: 1.2;
-  }
-  
-  .headerButtons {
-    gap: 15px;
-  }
-  
-  .downloadBtn {
-    padding: 10px 14px;
-    font-size: 1.2em;
-  }
-  
-  .closeBtn {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-  }
-}
-
-/* Mobile Landscape & Small Tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .modalContent {
-    width: 95vw;
-    height: 95vh;
-    border-radius: 12px;
-  }
-  
-  .modalHeader {
-    padding: 15px 20px;
-  }
-  
-  .modalHeader h3 {
-    font-size: 1.1em;
-  }
-  
-  .downloadBtn {
-    padding: 9px 13px;
-    font-size: 1.15em;
-  }
-}
-
-/* Tablets & Small Desktop (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .modalContent {
-    width: 90vw;
-    height: 95vh;
-    max-width: 800px;
-    max-height: 800px;
-  }
-  
-  .modalHeader {
-    padding: 18px 22px;
-  }
-}
-
-/* Desktop & Large Screens (1025px+) */
-@media (min-width: 1025px) {
-  .modalContent {
-    width: 85vw;
-    height: 90vh;
-    max-width: 1100px;
-    max-height: 950px;
-  }
-  
-  .modalHeader {
-    padding: 22px 28px;
-  }
-  
-  .modalHeader h3 {
-    font-size: 1.3em;
-  }
-}
-
-/* Extra Large Screens (1440px+) */
-@media (min-width: 1440px) {
-  .modalContent {
-    width: 80vw;
-    height: 85vh;
-    max-width: 1200px;
-  }
-}
+/* Minimal custom styles - Tailwind handles the rest */

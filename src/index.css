@@ -1,22 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Custom utilities and components */
-@layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent;
-  }
-  
-  .glass-effect {
-    @apply backdrop-blur-md bg-white/10 border border-white/20;
-  }
-  
-  .fun-card {
-    @apply transform transition-all duration-300 hover:scale-105 hover:rotate-1;
-  }
-  
-  .neon-glow {
-    @apply shadow-lg shadow-blue-500/25;
-  }
+.gradient-text {
+  background: linear-gradient(to right, #2563eb, #9333ea, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fun-card {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.fun-card:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.neon-glow {
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25);
 }
