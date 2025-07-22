@@ -54,7 +54,7 @@ function Hero() {
       </a>
       </span>
       <p className={styles.description}>
-        I'm A 2ⁿᵈ Year Student at the University of Alberta, I am passionate about web development and software development. I am always looking for new opportunities to learn and grow.
+        I'm A 3rd Year Student at the University of Alberta, I am passionate about web development and software development. I am always looking for new opportunities to learn and grow.
       </p>
       <p className={styles.description}>
         (Currently exploring Java and RISC-V)
