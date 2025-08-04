@@ -116,9 +116,6 @@ This site is deployed on Vercel with automatic deployments from the main branch.
 
 Feel free to submit issues and pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
