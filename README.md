@@ -112,13 +112,6 @@ This site is deployed on Vercel with automatic deployments from the main branch.
 3. Set up your custom domain (optional)
 4. Configure environment variables if needed
 
-## 📊 Performance
-
-- **Lighthouse Score**: 95+ across all metrics
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-
 ## 🤝 Contributing
 
 Feel free to submit issues and pull requests. For major changes, please open an issue first to discuss what you would like to change.
