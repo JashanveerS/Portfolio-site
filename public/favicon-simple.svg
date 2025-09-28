@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Sharp dark background -->
+  <rect width="32" height="32" fill="#0f172a" rx="3"/>
+  
+  <!-- Crisp purple J with sharp edges -->
+  <path d="M 21 7 L 21 17.5 C 21 20.5 18.5 21.5 16 21.5 C 13.5 21.5 12 20.5 12 17.5 L 12 16 L 14.5 16 L 14.5 17.5 C 14.5 18 15 18.5 16 18.5 C 17 18.5 17.5 18 17.5 17.5 L 17.5 7 Z" 
+        fill="#a855f7" 
+        stroke="#c084fc" 
+        stroke-width="0.3"/>
+  
+  <!-- Sharp inner highlight for definition -->
+  <rect x="19" y="9" width="1.5" height="7" fill="#c084fc" opacity="0.7"/>
+  <rect x="14.5" y="17" width="1" height="1" fill="#c084fc" opacity="0.7"/>
+  
+  <!-- Extra sharp edge highlight -->
+  <path d="M 19.5 8.5 L 19.5 17.5 C 19.5 18.5 18.5 19 16 19 C 15 19 14.5 18.5 14.5 17.5 L 14.5 17" 
+        fill="none" 
+        stroke="#ddd6fe" 
+        stroke-width="0.5" 
+        opacity="0.6"/>
+</svg>
