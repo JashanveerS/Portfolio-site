@@ -5,7 +5,7 @@
 [![Vite](https://img.shields.io/badge/Vite-7.0.5-646CFF)](https://vitejs.dev/)
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)](https://vercel.com/)
 
-> 🚀 **Live Site**: [jvsingh.com](https://jvsingh.com)
+> 🚀 [**Live Site**]((https://jashanveer.vercel.app/))
 
 A modern, responsive portfolio website showcasing my projects, skills, and professional experience. Built with React and featuring a clean, minimalist design with dark/light theme support.
 
