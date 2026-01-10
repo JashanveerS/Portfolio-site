@@ -4,7 +4,7 @@ import Whimsy from '../../assets/whimsy.png'
 import ProjectCard from '../../common/ProjectCard'
 import TastyTray from '../../assets/TastyTray.png'
 import hipster from '../../assets/hipsster.png'
-import SkyByte from '../../assets/SkyByte.png'
+import SkyByte from '../../assets/SkyByte-new.png'
 import Pulsechain from '../../assets/Pulsechain.png'
 
 function Projects() {
