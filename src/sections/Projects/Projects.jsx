@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ProjectsStyles.module.css'
-import Viberr from '../../assets/viberr.png'
+import Whimsy from '../../assets/whimsy.png'
 import ProjectCard from '../../common/ProjectCard'
 import TastyTray from '../../assets/TastyTray.png'
 import hipster from '../../assets/hipsster.png'
@@ -14,9 +14,9 @@ function Projects() {
       title: "Whimsy",
       subtitle: "Android Social Media App",
       description: "A mood-based social media app with journals, follows, and real-time comments. Features dynamic content feeds, interactive mood maps, and AI-generated images from user prompts.",
-      image: Viberr,
+      image: Whimsy,
       alt: "Whimsy Social Media App",
-      technologies: ["Java", "Android Studio", "Firebase", "DALL-E API", "Realtime Database", "RESTful APIs"],
+      technologies: ["Java", "Android SDK", "Firebase", "Firestore", "OpenAI API", "Google Places API","Android Studio"],
       githubLink: "https://github.com/cmput301-w25/project-bugoff",
       liveLink: null
     },
@@ -27,7 +27,7 @@ function Projects() {
       description: "A real-time blood donor-recipient matching app with location-based matching, urgency scoring, and gamified user experience with donor leaderboards.",
       image: Pulsechain,
       alt: "PulseChain Blood Donation App",
-      technologies: ["React.js", "React Native", "Node.js", "PostgreSQL", "Socket.io", "Google Maps SDK"],
+      technologies: ["React", "Vite", "Node.js", "Express", "PostgreSQL", "Google Maps API"],
       githubLink: "https://github.com/orgs/PulseChain-org/repositories",
       liveLink: null
     },
@@ -38,7 +38,7 @@ function Projects() {
       description: "A smart meal planning application that uses AI to suggest personalized recipes based on dietary preferences, available ingredients, and nutritional goals.",
       image: TastyTray,
       alt: "TastyTray App Screenshot",
-      technologies: ["React", "Node.js", "MongoDB", "OpenAI API", "Express"],
+      technologies: ["React", "TypeScript", "Vite", "Supabase", "Tailwind CSS"],
       githubLink: "https://github.com/JashanveerS/TastyTray",
       liveLink: null
     },
@@ -49,7 +49,7 @@ function Projects() {
       description: "A comprehensive cloud storage platform with file management, sharing capabilities, and secure user authentication. Built with modern web technologies.",
       image: SkyByte,
       alt: "SkyByte Cloud Storage",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Multer"],
+      technologies: ["TypeScript", "React", "Vite", "CSS Modules", "REST API","AppWrite"],
       githubLink: "https://github.com/Sky-Bytee/Skybyte",
       liveLink: null
     }
