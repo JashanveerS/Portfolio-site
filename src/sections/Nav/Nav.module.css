@@ -1,0 +1,31 @@
+.nav {
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: 50;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.darkToggle {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 2px solid var(--color-accent-700);
+  background: var(--color-accent-100);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 2px 2px 0 0 var(--color-accent-800);
+}
+body[data-theme='dark'] .darkToggle {
+  background: var(--color-accent-900);
+}
+
+.darkToggleGlyph {
+  width: 14px;
+  height: 14px;
+  box-shadow:
+    inset -3px -3px 0 0 rgba(0, 0, 0, 0.35),
+    inset 3px 3px 0 0 rgba(255, 255, 255, 0.35);
+}

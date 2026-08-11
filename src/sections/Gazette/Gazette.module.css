@@ -1,0 +1,333 @@
+.gazette {
+  min-height: 100vh;
+  background: var(--color-neutral-100, #f8f4f4);
+  color: #1a1a1a;
+  font-family: var(--font-body);
+  padding: 56px 0 40px;
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.titleBlock {
+  position: relative;
+  border-top: 4px double #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 18px 0;
+  text-align: center;
+}
+.titleBlock h1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 68px);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.titleBlock p {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 8px 0 0;
+  color: #444;
+}
+.seal {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+  color: var(--color-accent-700);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
+.frontPage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 24px;
+  border-bottom: 3px double #1a1a1a;
+  padding: 20px 0 24px;
+  align-items: center;
+}
+.frontPageText {
+  text-align: center;
+}
+.section {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 6px;
+}
+.frontPageText h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.15;
+  margin: 0;
+}
+.byline {
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  margin: 10px 0 0;
+}
+.photoBox {
+  border: 1px solid #1a1a1a;
+  padding: 6px;
+  justify-self: center;
+}
+.photoBox img {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  filter: grayscale(1) contrast(1.08);
+}
+.photoBox p {
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #666;
+  margin: 6px 0 0;
+}
+
+.columns {
+  columns: 2;
+  column-gap: 36px;
+  column-rule: 1px solid #1a1a1a;
+  font-size: 14.5px;
+  line-height: 1.7;
+  text-align: justify;
+  margin-top: 24px;
+}
+.columns p {
+  margin: 0 0 14px;
+}
+.dropCap {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  line-height: 38px;
+  float: left;
+  padding: 4px 8px 0 0;
+  font-weight: 600;
+}
+.columns blockquote {
+  margin: 0 0 14px;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 12px 4px;
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid #1a1a1a;
+  margin: 28px 0;
+}
+
+.almanac {
+  border: 1px solid #1a1a1a;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+}
+.almanacTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  text-align: center;
+}
+.almanacGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px 20px;
+  font-size: 13px;
+  color: #333;
+}
+.almanacGrid p {
+  margin: 0;
+}
+
+.classifiedLabel {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.projectBox {
+  border: 1px solid #1a1a1a;
+  padding: 16px;
+}
+.projectName {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+.projectKicker {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 10px;
+}
+.projectDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+.label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 14px;
+}
+.expRow {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+.expRole {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+.expMeta {
+  font-size: 12.5px;
+  font-style: italic;
+  color: #555;
+  margin: 2px 0 0;
+}
+.skillRow {
+  margin: 0 0 14px;
+}
+.skillCat {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 2px;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+.skillBlurb {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0 0 4px;
+  color: #555;
+  font-style: italic;
+}
+.skillItems {
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+.correspondence {
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  padding: 24px;
+}
+.corrTitle {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.corrLede {
+  font-size: 13px;
+  margin: 0 0 14px;
+  color: #444;
+}
+.corrLinks {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.corrLinks a {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+.ad {
+  border: 1px dashed #1a1a1a;
+  padding: 16px 20px;
+  margin: 28px 0 24px;
+  text-align: center;
+}
+.adLabel {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777;
+  margin: 0 0 8px;
+}
+.adTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 19px;
+  margin: 0;
+}
+.adBody {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 6px 0 0;
+  color: #444;
+  font-style: italic;
+}
+
+.colophon {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777;
+  margin: 24px 0 56px;
+}

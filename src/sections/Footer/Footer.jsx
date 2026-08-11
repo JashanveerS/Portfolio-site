@@ -1,13 +1,21 @@
-import styles from './FooterStyles.module.css'
+import styles from './FooterStyles.module.css';
+import { useSiteFx } from '../../common/SiteFxContext';
 
 function Footer() {
-    return (
-      <section id="footer" className={styles.container}>
-        <p>&copy; 2025 Jashanveer Singh.<br/>
-        All Rights Reserved.</p>
-      </section>
-    )
-}
+  const { playClick, showAchievement } = useSiteFx();
 
+  const onFooterClick = () => {
+    playClick();
+    showAchievement('Archivist', false);
+  };
+
+  return (
+    <footer className={styles.footer}>
+      <span onClick={onFooterClick} data-cursor="link" style={{ cursor: 'pointer' }}>
+        © 2026 Jashanveer Singh Arora · Built with a little too much love, and a few hidden secrets.
+      </span>
+    </footer>
+  );
+}
 
 export default Footer;

@@ -1,115 +1,70 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    
-    span {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 16px;
-        border-radius: 12px;
-        background: var(--project-card-bg);
-        box-shadow: 0 2px 8px var(--card-shadow);
-        border: 1px solid var(--border-color);
-        transition: all 0.2s ease;
-        cursor: pointer;
-        font-weight: 500;
-    }
-
-    span:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 4px 15px var(--card-shadow);
-        border-color: var(--accent-color);
-    }
-
-    img {
-        width: 24px;
-        height: 24px;
-    }
+  padding: calc(2.5 * var(--leading)) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--edge);
+  padding-right: var(--edge);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.skillsList {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 20px;
-    max-width: 800px;
-    margin: 20px auto 0;
+.kicker {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+  margin: 0 0 14px;
 }
 
-.skillCategory {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: var(--project-card-bg);
-    backdrop-filter: blur(10px);
-    padding: 35px;
-    border: 2px solid var(--border-color);
-    border-bottom: none;
-    transition: all 0.3s ease;
+.title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 calc(1.5 * var(--leading));
 }
 
-.skillCategory:first-child {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
 }
 
-.skillCategory:last-child {
-    border-bottom: 2px solid var(--border-color);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+.card {
+  border: 1px solid var(--color-divider);
+  border-top: 3px solid var(--color-accent-600);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  transition: transform 0.15s ease;
+}
+.card:nth-child(6n+1) { border-top-color: var(--color-accent-800); }
+.card:nth-child(6n+2) { border-top-color: var(--color-accent-500); }
+.card:nth-child(6n+3) { border-top-color: var(--color-accent-700); }
+.card:nth-child(6n+4) { border-top-color: var(--color-accent-400); }
+.card:nth-child(6n+5) { border-top-color: var(--color-accent-600); }
+.card:nth-child(6n+6) { border-top-color: var(--color-accent-900); }
+.card:hover {
+  transform: translateY(-3px);
 }
 
-.skillCategory:hover {
-    background: var(--hover-bg);
-    transform: translateX(5px);
-    border-color: var(--accent-color);
+.catTitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0 0 6px;
 }
 
-/* Make all skill lists consistent */
-.skillList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 100%;
+.blurb {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
 }
 
-.categoryTitle {
-    font-size: 1.1em;
-    color: var(--text-color);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    position: relative;
-    line-height: 1.2;
-}
-
-.categoryTitle::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 2px;
-    background: var(--accent-color);
-    border-radius: 2px;
-}
-
-/* Responsive design for larger screens */
-@media (width >= 768px) {
-    .skillsList {
-        max-width: 900px;
-    }
-    
-    .skillCategory {
-        padding: 35px 40px;
-    }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }

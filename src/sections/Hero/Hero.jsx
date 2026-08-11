@@ -1,79 +1,52 @@
-import React from 'react';
 import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/hero-img.jpeg';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import glight from '../../assets/github-light.svg';
-import gdark from '../../assets/github-dark.svg';
-import Llight from '../../assets/linkedin-light.svg';
-import LDark from '../../assets/linkedin-dark.svg';
+import { useSiteFx } from '../../common/SiteFxContext';
+import { stats, pixelRow } from '../../data/content';
 import CV from '../../assets/cv.pdf';
-import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
-  const {theme,toggleTheme} = useTheme();
-  
-  const themeIcon = theme === 'light' ? sun : moon;
-  const gitIcon = theme === 'light' ? glight : gdark;
-  const LinkedIcon = theme === 'light' ? Llight : LDark;
-  
-  // Open PDF directly in new tab - simple and secure
-  const handleResumeClick = () => {
-    window.open(CV, '_blank', 'noopener,noreferrer');
-  };
-  
+  const { playClick } = useSiteFx();
+
   return (
-    
-    <section id = "hero" className={styles.container}>
-    <div className={styles.colorModeContainer}>
-    <img 
-      className={styles.hero} 
-      src={heroImg} 
-      alt="Profile Picture of Jashanveer"
-    />
-    <img 
-    className={styles.colorMode} 
-    src={themeIcon} 
-    alt='Color Mode Icon'
-    onClick={toggleTheme} 
-    />
-    </div>
+    <>
+      <section id="home" className={styles.hero}>
+        <span className={styles.eyebrow}>Full-Stack Developer &amp; CS Student, University of Alberta</span>
+        <div className={styles.pixelRow} aria-hidden="true">
+          {pixelRow.map((color, i) => (
+            <span key={i} style={{ background: color, animationDelay: `${i * 0.12}s` }} />
+          ))}
+        </div>
+        <h1 className={styles.headline}>
+          <span>I build full-stack software</span>
+          <span className={styles.accentLine}>with React, Node, and real-time systems.</span>
+        </h1>
+        <p className={styles.lede}>
+          I&apos;m Jashanveer — a Computing Science student building full-stack products with React, Node and a genuine
+          soft spot for real-time systems and AI-assisted tools. This page has a couple of gimmicks tucked into it. See
+          if you can find them.
+        </p>
+        <div className={styles.actions}>
+          <a href="#projects" className="btn btn-primary" onClick={playClick}>View projects</a>
+          <a href="mailto:jashanveersingharora@gmail.com" className="btn btn-ghost" onClick={playClick}>Say hello</a>
+          <a href={CV} download="Jashanveer_Singh_Arora_Resume.pdf" className="btn btn-ghost" onClick={playClick}>
+            Download résumé
+          </a>
+        </div>
+        <p className={styles.cheatHint}>Psst — there&apos;s a cheat code somewhere on this page.</p>
+      </section>
 
-  <div className={styles.info}>
-    <h1>
-      Hi, 
-      <br/> 
-      I'm Jashanveer Singh
-    </h1>
-    <h2>Student-Full Stack Developer</h2>
-    <span>
-      <a href="https://github.com/JashanveerS" target="_blank">
-      <img src={gitIcon} alt="Github"/>
-      </a>
+      <hr className="hr" style={{ margin: 0 }} />
 
-      <a href="https://www.linkedin.com/in/jashanveer/" target="_blank">
-      <img className={styles.info}
-      src={LinkedIcon} alt="LinkedIn"/>
-      </a>
-      </span>
-      <p className={styles.description}>
-        I'm A 3rd Year Student at the University of Alberta, I am passionate about web development and software development. I am always looking for new opportunities to learn and grow.
-      </p>
-      <p className={styles.description}>
-        (Currently exploring Java and RISC-V)
-      </p>
-      <div style={{alignSelf: 'center'}}>
-        <button 
-          onClick={handleResumeClick}
-          className="hover"
-          title="View Resume"
-        >
-          Resume
-        </button>
-      </div>
-    
-  </div>
-  </section>
+      <section className={styles.stats}>
+        <div className={styles.statsGrid}>
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className={styles.statNum} style={{ color: s.color }}>{s.num}</p>
+              <p className={styles.statLabel}>{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

@@ -1,79 +1,35 @@
-import styles from './SkillsStyles.module.css'
-import cdark from '../../assets/checkmark-dark.svg'
-import clight from '../../assets/checkmark-light.svg'
-import SkillList from '../../common/SkillList.jsx'
-import { useTheme } from '../../common/ThemeContext';
+import styles from './SkillsStyles.module.css';
+import { useSiteFx } from '../../common/SiteFxContext';
+import Stamp from '../../common/Stamp';
+import { skills } from '../../data/content';
 
 function Skills() {
-  const {theme} = useTheme();
-  const CheckIcon = theme === 'light' ? clight : cdark;
-  
+  const { isRevealed } = useSiteFx();
+
   return (
-    <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills & Technologies</h1>
-      
-      <div className={styles.skillsList}>
-        <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Core Languages & Frameworks</h3>
-          <div className={styles.skillList}>
-            <SkillList src={CheckIcon} skill="Python" />
-            <SkillList src={CheckIcon} skill="Java" />
-            <SkillList src={CheckIcon} skill="TypeScript" />
-            <SkillList src={CheckIcon} skill="JavaScript" />
-            <SkillList src={CheckIcon} skill="React" />
-            <SkillList src={CheckIcon} skill="Next.js" />
-            <SkillList src={CheckIcon} skill="Flask" />
-            <SkillList src={CheckIcon} skill="TailwindCSS" />
+    <section
+      id="skills"
+      data-reveal="skills"
+      className={styles.container}
+      style={{ opacity: isRevealed('skills') ? 1 : 0, transform: isRevealed('skills') ? 'translateY(0)' : 'translateY(24px)' }}
+    >
+      <span className={styles.kicker}>Technical skills<Stamp n="04" rotate={6} /></span>
+      <h2 className={styles.title}>The toolbox</h2>
+      <div className={styles.grid}>
+        {skills.map((g) => (
+          <div key={g.cat} className={styles.card}>
+            <p className={styles.catTitle}>{g.cat}</p>
+            <p className={styles.blurb}>{g.blurb}</p>
+            <div className={styles.tags}>
+              {g.items.map((it) => (
+                <span key={it} className="tag tag-accent">{it}</span>
+              ))}
+            </div>
           </div>
-        </div>
-
-        <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Backend & Databases</h3>
-          <div className={styles.skillList}>
-            <SkillList src={CheckIcon} skill="Supabase (PostgreSQL)" />
-            <SkillList src={CheckIcon} skill="MongoDB" />
-            <SkillList src={CheckIcon} skill="Firebase" />
-            <SkillList src={CheckIcon} skill="Appwrite" />
-            <SkillList src={CheckIcon} skill="WebSockets" />
-            <SkillList src={CheckIcon} skill="Socket.io" />
-          </div>
-        </div>
-        
-        <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Mobile & Security</h3>
-          <div className={styles.skillList}>
-            <SkillList src={CheckIcon} skill="Android Studio" />
-            <SkillList src={CheckIcon} skill="Firebase Cloud Messaging" />
-            <SkillList src={CheckIcon} skill="2FA" />
-            <SkillList src={CheckIcon} skill="OTP Authentication" />
-            <SkillList src={CheckIcon} skill="Flask-Login" />
-          </div>
-        </div>
-
-        <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>AI & APIs</h3>
-          <div className={styles.skillList}>
-            <SkillList src={CheckIcon} skill="OpenAI (GPT, DALL-E)" />
-            <SkillList src={CheckIcon} skill="Google Gemini" />
-            <SkillList src={CheckIcon} skill="Google Maps SDK" />
-            <SkillList src={CheckIcon} skill="TheMealDB API" />
-          </div>
-        </div>
-        
-        <div className={styles.skillCategory}>
-          <h3 className={styles.categoryTitle}>Development Tools</h3>
-          <div className={styles.skillList}>
-            <SkillList src={CheckIcon} skill="Git & GitHub" />
-            <SkillList src={CheckIcon} skill="Vite" />
-            <SkillList src={CheckIcon} skill="CI/CD Pipelines" />
-            <SkillList src={CheckIcon} skill="C" />
-            <SkillList src={CheckIcon} skill="SQL" />
-            <SkillList src={CheckIcon} skill="RISC-V" />
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
 }
 
-export default Skills
+export default Skills;

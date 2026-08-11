@@ -1,49 +1,46 @@
-import React from 'react'
-import styles from './ProjectCard.module.css'
+import styles from './ProjectCard.module.css';
 
-function ProjectCard({link, src, alt, h3, p, technologies = [], description, githubLink, liveLink, animationDelay = 0}) {
+function ProjectCard({ project, onClick }) {
+  const { name, kicker, tint, image, desc, bullets, tags, link } = project;
+
   return (
-    <div 
-      className={styles.projectCard}
-      style={{'--animation-delay': `${animationDelay}s`}}
+    <div
+      className={`card elev-sm ${styles.card}`}
+      style={{ borderTopColor: tint, '--tint': tint }}
+      onClick={onClick}
+      data-cursor="link"
     >
-      <div className={styles.imageContainer}>
-        <img className={styles.projectImage} src={src} alt={alt} />
-        <div className={styles.overlay}>
-          <div className={styles.overlayButtons}>
-            {githubLink && (
-              <a href={githubLink} target='_blank' rel='noopener noreferrer' className={styles.overlayBtn}>
-                <span>Code</span>
-              </a>
-            )}
-            {liveLink && (
-              <a href={liveLink} target='_blank' rel='noopener noreferrer' className={styles.overlayBtn}>
-                <span>Live</span>
-              </a>
-            )}
-          </div>
+      {image ? (
+        <img className={styles.shot} src={image} alt={`${name} preview`} />
+      ) : (
+        <div className={styles.shotPlaceholder} style={{ background: `linear-gradient(135deg, ${tint}, var(--color-surface))` }}>
+          <span>{name}</span>
         </div>
-      </div>
-      
-      <div className={styles.projectInfo}>
-        <h3 className={styles.projectTitle}>{h3}</h3>
-        <p className={styles.projectSubtitle}>{p}</p>
-        {description && (
-          <p className={styles.projectDescription}>{description}</p>
-        )}
-        
-        {technologies.length > 0 && (
-          <div className={styles.technologies}>
-            {technologies.map((tech, index) => (
-              <span key={index} className={styles.techTag}>
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
+      )}
+      <div className={styles.body}>
+        <span className="card-kicker" style={{ color: tint }}>{kicker}</span>
+        <p className="card-title">{name}</p>
+        <p className="card-body">{desc}</p>
+        <ul className={styles.bullets}>
+          {bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+        <div className={styles.tags}>
+          {tags.map((t) => (
+            <span key={t} className="tag tag-outline">{t}</span>
+          ))}
+        </div>
+        <div className="card-meta">
+          {link ? (
+            <a href={link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>View repo ↗</a>
+          ) : (
+            <span>Client project — code under NDA</span>
+          )}
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProjectCard;

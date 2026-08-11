@@ -1,0 +1,130 @@
+.about {
+  padding: calc(2.5 * var(--leading)) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--edge);
+  padding-right: var(--edge);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--leading) clamp(24px, 5vw, 72px);
+  align-items: center;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+  margin: 0 0 14px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.choreographer {
+  color: var(--color-accent-700);
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
+.bio {
+  font-size: 15.5px;
+  line-height: var(--leading);
+  margin: calc(var(--leading) - 1cap) 0 0;
+  max-width: 52ch;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.flipStage {
+  perspective: 1400px;
+  justify-self: end;
+  width: min(320px, 100%);
+  max-width: 100%;
+  position: relative;
+  transform: rotate(-2.5deg);
+}
+.flipStage::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  width: 60px;
+  height: 24px;
+  background: color-mix(in srgb, var(--color-accent-300) 65%, transparent);
+  box-shadow: 0 1px 3px color-mix(in srgb, var(--color-neutral-900) 25%, transparent);
+  transform: rotate(-7deg);
+  z-index: 3;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+}
+
+.plateFront {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  margin: 0;
+}
+
+.photoFrame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-accent-100);
+}
+.photoFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.plateFront figcaption {
+  text-align: center;
+  margin-top: 8px;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+
+.plateBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border: 6px solid var(--color-accent-200);
+  outline: 1px solid var(--color-accent-300);
+  background: var(--color-accent-100);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  aspect-ratio: 4 / 5;
+}
+.plateBack p {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  color: var(--color-accent-800);
+}
